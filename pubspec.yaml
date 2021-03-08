@@ -35,6 +35,9 @@ dev_dependencies:
     sdk: flutter
   build_runner: any
   freezed: any
+  state_notifier: any
+  flutter_state_notifier: any
+  provider: any
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
