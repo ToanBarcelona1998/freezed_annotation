@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'product.dart';
 
@@ -9,12 +9,14 @@ part of 'product.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$ProductTearOff {
   const _$ProductTearOff();
 
-// ignore: unused_element
-  _Product call({String id = "1", String name = "Dell Inprision I7 Chip H"}) {
+  _Product call({String? id = "1", String? name = "Dell"}) {
     return _Product(
       id: id,
       name: name,
@@ -23,23 +25,22 @@ class _$ProductTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Product = _$ProductTearOff();
 
 /// @nodoc
 mixin _$Product {
-  String get id;
-  String get name;
+  String? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ProductCopyWith<Product> get copyWith;
+  $ProductCopyWith<Product> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ProductCopyWith<$Res> {
   factory $ProductCopyWith(Product value, $Res Function(Product) then) =
       _$ProductCopyWithImpl<$Res>;
-  $Res call({String id, String name});
+  $Res call({String? id, String? name});
 }
 
 /// @nodoc
@@ -52,12 +53,18 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -67,7 +74,7 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
   factory _$ProductCopyWith(_Product value, $Res Function(_Product) then) =
       __$ProductCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String name});
+  $Res call({String? id, String? name});
 }
 
 /// @nodoc
@@ -81,28 +88,32 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
   }) {
     return _then(_Product(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 class _$_Product implements _Product {
-  _$_Product({this.id = "1", this.name = "Dell Inprision I7 Chip H"})
-      : assert(id != null),
-        assert(name != null);
+  _$_Product({this.id = "1", this.name = "Dell"});
 
   @JsonKey(defaultValue: "1")
   @override
-  final String id;
-  @JsonKey(defaultValue: "Dell Inprision I7 Chip H")
+  final String? id;
+  @JsonKey(defaultValue: "Dell")
   @override
-  final String name;
+  final String? name;
 
   @override
   String toString() {
@@ -132,13 +143,14 @@ class _$_Product implements _Product {
 }
 
 abstract class _Product implements Product {
-  factory _Product({String id, String name}) = _$_Product;
+  factory _Product({String? id, String? name}) = _$_Product;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProductCopyWith<_Product> get copyWith;
+  _$ProductCopyWith<_Product> get copyWith =>
+      throw _privateConstructorUsedError;
 }

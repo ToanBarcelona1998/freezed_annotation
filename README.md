@@ -1,4 +1,4 @@
-# freezed_anotation
+# freed_with_state_notifier
 
 A new Flutter application.
 
