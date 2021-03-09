@@ -32,13 +32,22 @@ class MyApp extends StatelessWidget {
             TextField(
               controller: edtName,
             ),
+            StateNotifierBuilder(
+              builder: (BuildContext context, Product product, child) => product.when(
+                initial: (id, name) => Text("Id = $id Name = $name"),
+                laptop: (id, name) => Text("Id = $id Name = $name"),
+                phone: (id, name) => Text("Id = $id Name = $name"),
+              ),
+              stateNotifier: Provider.of<ProductNotifier>(context),
+            ),
             TextButton(
               onPressed: () {
-                context.read<ProductNotifier>().changeProduct(edtId.text, edtName.text);
+                context
+                    .read<ProductNotifier>()
+                    .changeProduct(edtId.text, edtName.text);
               },
               child: Text("Change"),
             ),
-            Text("Id = ${context.watch<Product>().id} Name = ${context.watch<Product>().name}"),
           ],
         ),
       ),

@@ -2,11 +2,14 @@ import 'package:freed_with_state_notifier/product.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 class ProductNotifier extends StateNotifier<Product>{
-  ProductNotifier() : super(Product());
-
+  ProductNotifier() : super(Product.initial());
   changeProduct(String idPr,String namePr){
-    state=state.copyWith(id: idPr,name: namePr);
-    //state=Product(id: state.id,name: state.name);
+      state=Laptop(id: idPr,name: "$namePr is laptop");
+      print(state.toString());
+      Future.delayed(Duration(seconds: 3),(){
+        state= Phone(id: idPr,name: "$namePr is phone");
+        print(state.toString());
+      });
   }
   @override
   set state(Product value) {
