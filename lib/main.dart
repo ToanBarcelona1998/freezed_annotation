@@ -18,6 +18,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final edtId = TextEditingController();
   final edtName = TextEditingController();
+  Product _product=Initial();
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +35,11 @@ class MyApp extends StatelessWidget {
             ),
             StateNotifierBuilder(
               builder: (BuildContext context, Product product, child) => product.when(
-                initial: (id, name) => Text("Id = $id Name = $name"),
-                laptop: (id, name) => Text("Id = $id Name = $name"),
-                phone: (id, name) => Text("Id = $id Name = $name"),
+                initial: (id, name) => Text("Id = $id Name init = $name"),
+                laptop: (id, name) => Text("Id = $id Name laptop: = $name"),
+                phone: (id, name) => Text("Id = $id Name iphone= $name"),
               ),
-              stateNotifier: Provider.of<ProductNotifier>(context),
+              stateNotifier: context.read<ProductNotifier>(),
             ),
             TextButton(
               onPressed: () {
